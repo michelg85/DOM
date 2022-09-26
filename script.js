@@ -41,9 +41,7 @@ function crearCard (producto) {
     sectionProductos.appendChild(card);
     //creo divs que contengan las imagenes de los productos y se los asigno como hijos a las cards
     let cardImg = document.createElement("div");
-    let pathimagen = `./imagenes/${producto.id}.jpg`
-    console.log(pathimagen)
-    cardImg.innerHTML = `<img src="${pathimagen}"  class="card-img-top" alt="${producto.nombre}"></img>`;
+    cardImg.innerHTML = `<img src="./imagenes/${producto.id}.jpg" class="card-img-top" alt="${producto.nombre}"></img>`;
     card.appendChild(cardImg);
     //creo divs que contengan los nombres de los productos y los botones, despues se los asigno como hijos a las cards
     let cardBody = document.createElement("div");
@@ -66,3 +64,7 @@ for (const tonkatsu of tonkatsus) {
 for (const gyoza of gyozas) {
     crearCard(gyoza);
 }
+
+//let pathimagen = `./imagenes/${producto.id}.jpg`
+  //  console.log(pathimagen)
+   // cardImg.innerHTML = `<img src="${pathimagen}"  class="card-img-top" alt="${producto.nombre}"></img>`;
